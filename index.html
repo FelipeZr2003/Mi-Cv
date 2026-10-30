@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Portafolio de Felipe Zapata, desarrollador de software junior especializado en backend, automatización e integración con IA." />
+  <title>Felipe Zapata | Desarrollador de Software</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: { ink: '#0f172a', accent: '#22c55e', electric: '#60a5fa' },
+          boxShadow: { glow: '0 0 45px rgba(34,197,94,.15)' }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: Inter, sans-serif; }
+    .mono { font-family: 'DM Mono', monospace; }
+    .hero-orb { background: radial-gradient(circle, rgba(203,213,225,.14), transparent 67%); }
+    html:not(.dark) article { background-color: rgb(203 213 225 / .92) !important; }
+    html:not(.dark) #stack .grid > .reveal { background-color: rgb(203 213 225 / .92) !important; }
+    html:not(.dark) .max-w-sm > div.relative { background-color: rgb(226 232 240 / .88) !important; border-color: rgb(148 163 184 / .65) !important; }
+    .max-w-sm > div.absolute { background: transparent !important; }
+    .max-w-sm > div.relative { background: transparent !important; box-shadow: none !important; }
+    html:not(.dark) article, html:not(.dark) #stack .grid > .reveal { border-color: rgb(71 85 105 / .85) !important; }
+    html.dark article, html.dark #stack .grid > .reveal { border-color: rgb(0 0 0 / .9) !important; }
+    html.dark #stack .grid > .reveal { background-color: rgb(9 9 11) !important; border-color: rgb(203 213 225 / .35) !important; box-shadow: 0 0 35px rgba(203, 213, 225, .06) !important; }
+    a[href^="https://wa.me"] { background-color: #22c55e !important; color: #020617 !important; border-color: #22c55e !important; }
+    html:not(.dark) a[href^="https://github.com"] { background-color: rgb(203 213 225 / .92) !important; border-color: rgb(148 163 184 / .7) !important; color: #0f172a !important; }
+    html.dark a[href^="https://github.com"] { background-color: #18181b !important; border-color: rgb(203 213 225 / .35) !important; color: #f8fafc !important; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    ::selection { background: #22c55e; color: #052e16; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased transition-colors duration-300 dark:bg-black dark:text-slate-100">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-slate-50/80 backdrop-blur-xl dark:border-slate-300/20 dark:bg-black/85">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Navegación principal">
+      <a href="#inicio" class="mono text-sm font-medium tracking-tight text-slate-900 dark:text-white"><span class="text-green-500">./</span>felipe-zapata</a>
+      <div id="desktop-menu" class="hidden items-center gap-7 text-sm text-slate-600 dark:text-slate-300 md:flex">
+        <a class="transition hover:text-green-500" href="#sobre-mi">Sobre mí</a>
+        <a class="transition hover:text-green-500" href="#experiencia">Experiencia</a>
+        <a class="transition hover:text-green-500" href="#stack">Stack</a>
+        <a class="rounded-full border border-slate-300 px-4 py-2 text-slate-900 transition hover:bg-slate-200 dark:border-slate-300/50 dark:text-white dark:hover:border-slate-200 dark:hover:bg-slate-800" href="#contacto">Contacto</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" aria-label="Cambiar modo de color" class="rounded-full p-2 text-slate-600 transition hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-800"><span id="theme-icon">☼</span></button>
+        <button id="menu-toggle" aria-label="Abrir menú" class="rounded-lg p-2 text-slate-600 hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-800 md:hidden">☰</button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-slate-200 px-6 pb-5 pt-3 dark:border-slate-800 md:hidden">
+      <a class="block py-2 text-sm" href="#sobre-mi">Sobre mí</a><a class="block py-2 text-sm" href="#experiencia">Experiencia</a><a class="block py-2 text-sm" href="#stack">Stack</a><a class="block py-2 text-sm" href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="relative isolate overflow-hidden bg-slate-50 pt-36 pb-24 sm:pt-44 sm:pb-32 dark:bg-black">
+      <div class="hero-orb absolute -right-56 -top-48 -z-10 h-[640px] w-[640px]"></div>
+      <div class="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[1.2fr_.8fr]">
+        <div class="reveal">
+          <p class="mono mb-6 text-sm text-green-600 dark:text-green-400">// software que resuelve problemas reales</p>
+          <h1 class="max-w-4xl text-5xl font-extrabold leading-[1.03] tracking-[-.04em] text-slate-950 dark:text-white sm:text-7xl">Hola, soy <span class="text-green-500">Felipe Zapata</span> 👋</h1>
+          <p class="mt-7 max-w-2xl text-xl font-semibold leading-relaxed text-slate-700 dark:text-slate-200">Desarrollador de Software Junior <span class="text-green-500">|</span> Backend, Automatización e Integración con IA</p>
+          <p class="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-400"> En busca de ayudar a las empresas o proyectos a transformar requerimientos complejos en sistemas eficientes, escalables y orientados a resultados reales.</p>
+          <div class="mt-9 flex flex-wrap gap-3"><a href="https://wa.me/573172345218" target="_blank" rel="noreferrer" class="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 dark:bg-slate-200 dark:text-black dark:hover:bg-white">Hablemos por WhatsApp ↗</a><a href="https://github.com/FelipeZr2003" target="_blank" rel="noreferrer" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold transition hover:border-slate-500 hover:bg-slate-100 dark:border-slate-300/50 dark:hover:border-slate-200 dark:hover:bg-slate-800">Ver GitHub ↗</a></div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-sm" style="transition-delay: .15s"><div class="absolute -inset-4 rounded-[2rem] bg-green-500/10 blur-2xl"></div><div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-2xl shadow-slate-300/30 dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/30"><div class="mb-8 flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-red-400"></span><span class="h-3 w-3 rounded-full bg-yellow-400"></span><span class="h-3 w-3 rounded-full bg-green-400"></span><span class="mono ml-auto text-xs text-slate-400">felipe.js</span></div><div class="mono space-y-3 text-sm leading-7"><p><span class="text-pink-500">const</span> <span class="text-blue-500 dark:text-blue-300">felipe</span> = {</p><p class="pl-4"><span class="text-green-600 dark:text-green-400">purpose</span>: <span class="text-amber-600 dark:text-amber-300">'impactar'</span>,</p><p class="pl-4"><span class="text-green-600 dark:text-green-400">stack</span>: <span class="text-amber-600 dark:text-amber-300">'fullstack'</span>,</p><p class="pl-4"><span class="text-green-600 dark:text-green-400">focusing</span>: <span class="text-amber-600 dark:text-amber-300">'IA + automatización'</span></p><p>};</p><p class="pt-3 text-slate-400">// listo para construir</p></div></div></div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="border-y border-slate-200/80 bg-white py-24 dark:border-slate-300/25 dark:bg-black"><div class="mx-auto max-w-6xl px-6"><div class="reveal grid gap-10 lg:grid-cols-[.65fr_1.35fr]"><div><p class="mono text-sm text-green-600 dark:text-slate-300">01 / sobre mí</p><h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Código con contexto.<br />Resultados con propósito.</h2></div><div class="text-lg leading-8 text-slate-600 dark:text-slate-300"><p>"Soy Tecnólogo y actualmente curso la Ingeniería en Desarrollo de Software. No solo escribo código: me apasiona entender el problema de negocio detrás de cada pantalla.</p><p class="mt-5">Vengo de trabajar como Fullstack en <strong class="text-slate-900 dark:text-white">HWI (la alianza entre Haceb y Whirlpool)</strong>, donde diseñé sistemas desde cero, desde la toma de requerimientos con el cliente hasta la implementación de bases de datos y lógica de negocio (como sistemas de admisión y evaluación interna). Además, de forma independiente he creado soluciones a la medida para comercios locales: sistemas de auditoría de inventarios, analítica de ventas y automatización de envíos masivos de nóminas.</p><p class="mt-5">¿Mi enfoque actual? Sé integrar la inteligencia artificial y agentes de desarrollo de manera inteligente, logrando <strong class="text-slate-900 dark:text-white">aumentar la eficiencia en mis flujos de trabajo</strong>. Busco un equipo/empresa/proyecto consolidado donde pueda aportar toda mi energía, seguir creciendo profesionalmente y aportar estabilidad y valor desde el día uno."</p></div></div></div></section>
+
+    <section id="experiencia" class="py-24"><div class="mx-auto max-w-6xl px-6"><div class="reveal mb-12"><p class="mono text-sm text-slate-500 dark:text-slate-300">02 / experiencia</p><h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Experiencia profesional destacada</h2></div><div class="grid gap-5 md:grid-cols-2"><article class="reveal rounded-2xl border border-slate-300 bg-white p-7 shadow-lg shadow-slate-300/35 transition hover:-translate-y-1 hover:border-slate-500 hover:shadow-xl dark:border-slate-300/35 dark:bg-zinc-950 dark:shadow-[0_0_35px_rgba(203,213,225,.06)]"><div class="mb-7 flex items-start justify-between gap-4"><span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">01</span><span class="mono text-xs text-slate-400">FULLSTACK</span></div><h3 class="text-xl font-bold">Auxiliar de Desarrollo Fullstack <span class="text-slate-400">|</span> HWI (Haceb &amp; Whirlpool)</h3><p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">Lideré el levantamiento de requerimientos, diseño de bases de datos y desarrollo end-to-end de sistemas críticos internos, incluyendo módulos de registro/admisión para personal externo y plataformas de evaluación por áreas.</p></article><article class="reveal rounded-2xl border border-slate-300 bg-white p-7 shadow-lg shadow-slate-300/35 transition hover:-translate-y-1 hover:border-slate-500 hover:shadow-xl dark:border-slate-300/35 dark:bg-zinc-950 dark:shadow-[0_0_35px_rgba(203,213,225,.06)]" style="transition-delay:.1s"><div class="mb-7 flex items-start justify-between gap-4"><span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200">02</span><span class="mono text-xs text-slate-400">INDEPENDIENTE</span></div><h3 class="text-xl font-bold">Desarrollador de Software Independiente</h3><p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">Creación de soluciones a medida para comercios (carnicerías, tiendas). Desarrollé sistemas de auditoría de inventarios, paneles de gráficos de ventas y plataformas de envío masivo automatizado de volantes de pago de nómina, optimizando tiempos operativos críticos.</p></article></div></div></section>
+
+    <section id="stack" class="border-y border-slate-200/80 py-24 dark:border-slate-300/25"><div class="mx-auto max-w-6xl px-6"><div class="reveal mb-12"><p class="mono text-sm text-slate-500 dark:text-slate-300">03 / stack tecnológico</p><h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Herramientas para cada desafío</h2></div><div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><div class="reveal rounded-2xl border border-slate-300 bg-white p-6 shadow-md shadow-slate-300/30 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-300/30 dark:bg-black"><h3 class="mb-5 font-semibold text-slate-700 dark:text-slate-200">Backend y Lenguajes</h3><p class="leading-8 text-slate-600 dark:text-slate-400">C# · .NET · Python · JavaScript · PHP · Kotlin</p></div><div class="reveal rounded-2xl border border-slate-300 bg-white p-6 shadow-md shadow-slate-300/30 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-300/30 dark:bg-black" style="transition-delay:.1s"><h3 class="mb-5 font-semibold text-slate-700 dark:text-slate-200">Bases de Datos</h3><p class="leading-8 text-slate-600 dark:text-slate-400">SQL Server · MySQL · PostgreSQL · Firebase</p></div><div class="reveal rounded-2xl border border-slate-300 bg-white p-6 shadow-md shadow-slate-300/30 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-300/30 dark:bg-black" style="transition-delay:.2s"><h3 class="mb-5 font-semibold text-slate-700 dark:text-slate-200">Frontend y Arquitectura</h3><p class="leading-8 text-slate-600 dark:text-slate-400">HTML5 · CSS3 · Tailwind CSS · JavaScript (ES Modules)</p></div><div class="reveal rounded-2xl border border-slate-300 bg-white p-6 shadow-md shadow-slate-300/30 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-300/30 dark:bg-black" style="transition-delay:.3s"><h3 class="mb-5 font-semibold text-slate-700 dark:text-slate-200">Herramientas &amp; IA</h3><p class="leading-8 text-slate-600 dark:text-slate-400">Git · GitHub · Claude Code · Codex · Gemini · Power Platform · Business Intelligence.</p></div></div></div></section>
+
+    <section id="contacto" class="relative overflow-hidden py-28"><div class="hero-orb absolute left-1/2 top-0 -z-10 h-[500px] w-[700px] -translate-x-1/2 opacity-60"></div><div class="reveal mx-auto max-w-3xl px-6 text-center"><p class="mono text-sm text-slate-500 dark:text-slate-300">04 / contacto</p><h2 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-6xl">¿Construimos algo útil?</h2><p class="mx-auto mt-6 max-w-xl leading-8 text-slate-600 dark:text-slate-400">Estoy listo para aportar estabilidad, energía y valor desde el día uno.</p><div class="mt-9 flex flex-wrap justify-center gap-3"><a href="https://wa.me/573172345218" target="_blank" rel="noreferrer" class="rounded-full bg-slate-200 px-7 py-3 font-semibold text-black transition hover:bg-white dark:bg-slate-200 dark:hover:bg-white">Escríbeme por WhatsApp</a><a href="https://github.com/FelipeZr2003" target="_blank" rel="noreferrer" class="rounded-full border border-slate-300 px-7 py-3 font-semibold transition hover:border-slate-500 dark:border-slate-300/50 dark:hover:border-slate-200 dark:hover:bg-slate-800">FelipeZr2003 en GitHub</a></div></div></section>
+  </main>
+  <footer class="border-t border-slate-200 py-7 dark:border-slate-800"><div class="mx-auto flex max-w-6xl flex-col justify-between gap-3 px-6 text-sm text-slate-500 sm:flex-row"><span>© 2025 Felipe Zapata</span><span class="mono">Medellin · Colombia</span></div></footer>
+  <script>
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+    document.getElementById('theme-toggle').addEventListener('click', () => { root.classList.toggle('dark'); localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); document.getElementById('theme-icon').textContent = root.classList.contains('dark') ? '☾' : '☼'; });
+    document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
